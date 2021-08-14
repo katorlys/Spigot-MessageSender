@@ -8,6 +8,10 @@ This code allows you to only code for one line to send messages and broadcasts.<
 PS: Supports color codes.<br>
 
 ## Usage
+**Replace "&" with "§" to fix color messages**
+```java
+MessageSender.Color(String string);
+```
 **Send message to a player**
 ```java
 public void sendMessage(Player player, String message);
