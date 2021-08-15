@@ -29,4 +29,4 @@ public void sendTitle(Player player, String title, String subtitle);
 public void broadcastTitle(String title, String subtitle);
 ```
 
-There are also Javadoc comments before every methods.<br>
+There are also Javadoc comments before every method.<br>
