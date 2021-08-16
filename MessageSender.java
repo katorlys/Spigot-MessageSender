@@ -20,7 +20,7 @@ public class MessageSender {
      * @param player
      * @param message
      */
-    public void sendMessage(Player player, String message) {
+    public static void sendMessage(Player player, String message) {
         player.sendMessage(MessageSender.Color(message));
     }
 
@@ -29,10 +29,19 @@ public class MessageSender {
      * 
      * @param message
      */
-    public void broadcastMessage(String message) {
+    public static void broadcastMessage(String message) {
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendMessage(MessageSender.Color(message));
         }
+    }
+
+    /**
+     * Send message to console and all online players.
+     * 
+     * @param message
+     */
+    public static void broadcastMessageAll(String message) {
+        Bukkit.broadcastMessage(MessageSender.Color(message));
     }
 
     /**
@@ -42,7 +51,7 @@ public class MessageSender {
      * @param title
      * @param subtitle
      */
-    public void sendTitle(Player player, String title, String subtitle) {
+    public static void sendTitle(Player player, String title, String subtitle) {
         player.sendTitle(MessageSender.Color(title), MessageSender.Color(subtitle), 10, 40, 20); // Show title 2s
     }
 
@@ -52,7 +61,7 @@ public class MessageSender {
      * @param title
      * @param subtitle
      */
-    public void broadcastTitle(String title, String subtitle) {
+    public static void broadcastTitle(String title, String subtitle) {
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendTitle(MessageSender.Color(title), MessageSender.Color(subtitle), 10, 40, 20); // Show title 2s
         }

@@ -3,7 +3,7 @@
 
 ## Introduction
 Tired of writing message-sending codes every time you want to send information?<br>
-This code allows you to only code for one line to send messages and broadcasts.<br>
+This code allows you to only code for one line to send messages and broadcasts without polluting the console.<br>
 
 PS: Supports color codes.<br>
 
@@ -14,19 +14,23 @@ MessageSender.Color(String string);
 ```
 **Send message to a player**
 ```java
-public void sendMessage(Player player, String message);
+MessageSender.sendMessage(Player player, String message);
 ```
 **Send message to all online players**
 ```java
-public void broadcastMessage(String message);
+MessageSender.broadcastMessage(String message);
+```
+** Send message to console and all online players**
+```java
+MessageSender.broadcastMessageAll(String message);
 ```
 **Send title to a player**
 ```java
-public void sendTitle(Player player, String title, String subtitle);
+MessageSender.sendTitle(Player player, String title, String subtitle);
 ```
 **Send title to all online players**
 ```java
-public void broadcastTitle(String title, String subtitle);
+MessageSender.broadcastTitle(String title, String subtitle);
 ```
 
 There are also Javadoc comments before every method.<br>
