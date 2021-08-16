@@ -20,7 +20,7 @@ MessageSender.sendMessage(Player player, String message);
 ```java
 MessageSender.broadcastMessage(String message);
 ```
-** Send message to console and all online players**
+**Send message to console and all online players**
 ```java
 MessageSender.broadcastMessageAll(String message);
 ```
