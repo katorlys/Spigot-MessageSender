@@ -8,7 +8,8 @@ This code allows you to only code for one line to send messages and broadcasts w
 PS: Supports color codes.<br>
 
 ## Usage
-**Replace "&" with "§" to fix color messages**
+**Replace "&" with "§" to fix color messages**<br>
+If you don't want "&" to be replaced, please use "&&".
 ```java
 MessageSender.Color(String string);
 ```
