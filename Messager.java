@@ -3,7 +3,7 @@ import java.util.Objects;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-public class MessageSender {
+public class Messager {
     /**
      * Replace "&" with "§" to fix color messages.
      * 
@@ -21,7 +21,15 @@ public class MessageSender {
      * @param message
      */
     public static void sendMessage(Player player, String message) {
-        player.sendMessage(MessageSender.Color(message));
+        player.sendMessage(Messager.Color(message));
+    }
+
+    /**
+     * Send message to a command sender.
+     *
+     */
+    public static void senderMessage(Sender sender, String message) {
+        sender.sendMessage(Messager.Color(message));
     }
 
     /**
@@ -31,7 +39,7 @@ public class MessageSender {
      */
     public static void broadcastMessage(String message) {
         for (Player player : Bukkit.getOnlinePlayers()) {
-            player.sendMessage(MessageSender.Color(message));
+            player.sendMessage(Messager.Color(message));
         }
     }
 
@@ -41,7 +49,7 @@ public class MessageSender {
      * @param message
      */
     public static void broadcastMessageAll(String message) {
-        Bukkit.broadcastMessage(MessageSender.Color(message));
+        Bukkit.broadcastMessage(Messager.Color(message));
     }
 
     /**
@@ -52,7 +60,7 @@ public class MessageSender {
      * @param subtitle
      */
     public static void sendTitle(Player player, String title, String subtitle) {
-        player.sendTitle(MessageSender.Color(title), MessageSender.Color(subtitle), 10, 40, 20); // Show title 2s
+        player.sendTitle(Messager.Color(title), Messager.Color(subtitle), 10, 40, 20); // Show title 2s
     }
 
     /**
@@ -63,7 +71,7 @@ public class MessageSender {
      */
     public static void broadcastTitle(String title, String subtitle) {
         for (Player player : Bukkit.getOnlinePlayers()) {
-            player.sendTitle(MessageSender.Color(title), MessageSender.Color(subtitle), 10, 40, 20); // Show title 2s
+            player.sendTitle(Messager.Color(title), Messager.Color(subtitle), 10, 40, 20); // Show title 2s
         }
     }
 }
