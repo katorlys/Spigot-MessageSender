@@ -1,3 +1,12 @@
+/**
+ * Spigot-Messager
+ * 
+ * Copyright Katorly Lab
+ * (github.com/katorlys)
+ * 
+ * License under GPLv3
+ */
+
 import java.util.Objects;
 
 import org.bukkit.Bukkit; 
